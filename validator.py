@@ -1,9 +1,7 @@
 import os
 import re
-import socket
 import psutil
 import subprocess
-import requests
 
 
 # Function to parse the configuration file
@@ -96,7 +94,7 @@ def main(config_file_path):
         print('没有发现配置文件有问题,如果还是不能通过IP连接,请检查防火墙端口是否已开,或者重启PalServer.')
 
 
-config_file_path = ""
+config_file_path = ''
 while 'PalWorldSettings.ini' not in config_file_path:
     config_file_path = input('输入你的配置文件(PalWorldSettings.ini)路径:').replace('\"', '')
     if 'PalWorldSettings.ini' not in config_file_path:
